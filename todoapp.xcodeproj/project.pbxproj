@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		344AF4042D557A8900AC2165 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344AF4032D557A8900AC2165 /* HeaderView.swift */; };
+		345806E82D580C3000DEF3A5 /* extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345806E72D580C3000DEF3A5 /* extansion.swift */; };
 		34A636CD2D53AA5B004FCBB3 /* todoappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A636CC2D53AA5B004FCBB3 /* todoappApp.swift */; };
 		34A636CF2D53AA5B004FCBB3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A636CE2D53AA5B004FCBB3 /* MainView.swift */; };
 		34A636D12D53AA5C004FCBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A636D02D53AA5C004FCBB3 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		344AF4032D557A8900AC2165 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		345806E72D580C3000DEF3A5 /* extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extansion.swift; sourceTree = "<group>"; };
 		34A636C92D53AA5B004FCBB3 /* todoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A636CC2D53AA5B004FCBB3 /* todoappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoappApp.swift; sourceTree = "<group>"; };
 		34A636CE2D53AA5B004FCBB3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				34A636CC2D53AA5B004FCBB3 /* todoappApp.swift */,
 				34A6370B2D53AEBF004FCBB3 /* GoogleService-Info.plist */,
 				34A636D02D53AA5C004FCBB3 /* Assets.xcassets */,
+				345806E72D580C3000DEF3A5 /* extansion.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				34F65A432D556A35002D8BEB /* NewItemView.swift in Sources */,
 				344AF4042D557A8900AC2165 /* HeaderView.swift in Sources */,
 				34F65A572D556B38002D8BEB /* LoginViewViewModel.swift in Sources */,
+				345806E82D580C3000DEF3A5 /* extansion.swift in Sources */,
 				34DCC0392D56511800D107EF /* BigButtonView.swift in Sources */,
 				34A636CF2D53AA5B004FCBB3 /* MainView.swift in Sources */,
 				34F65A512D556B05002D8BEB /* MainViewViewModel.swift in Sources */,

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+extension Encodable{
+    func asDictionary() -> [String: Any]? {}
+        
+}
