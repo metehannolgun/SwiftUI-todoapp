@@ -29,22 +29,21 @@ class RegisterViewViewModel: ObservableObject{
                 return
             }
 //            insert metodu çağıralacak
+            self?.insertUserRecord(id: userId)
         }
             
     }
     
     private func insertUserRecord(id: String){
         let newUser = User(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
-        
+       
         let db = Firestore.firestore()
-        
+//        users collection'ına ekleme yapılacak
         db.collection("users")
             .document(id)
-            .setData(newUser)
-        
+            .setData(newUser.asDictionary())
     }
-    
-    
+
     private func validate() -> Bool {
         errorMessage = ""
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
