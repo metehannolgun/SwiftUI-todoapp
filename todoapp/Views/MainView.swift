@@ -14,15 +14,28 @@ struct MainView: View {
 
 //        Login oldu mu ve currenUserId doldu mu kontrolü
         if viewModel.isSignedIn, !viewModel.currenUserId.isEmpty{
-            ToDoListView()
-            
+            accountView
         } else {
             LoginView()
-            
+        }
+    }
+//bir view sınıfı oluşturduk ve bunu yukarda çağırdık böylece kod karmaşasaı azaldı
+    @ViewBuilder
+    var accountView: some View{
+        TabView{
+//id gönderiyoruz , ToDoListView içindeki init fonksiyonu çalışacak ve veri çekilecek
+            ToDoListView(userId:  viewModel.currenUserId)
+                .tabItem{
+                    Label("Görevler", systemImage: "house")
+                }
+            ProfileView()
+                .tabItem{
+                    Label("Profile",
+                    systemImage: "person.circle")
+                }
         }
     }
 }
-
 #Preview {
     MainView()
 }

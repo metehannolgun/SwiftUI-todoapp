@@ -7,12 +7,39 @@
 
 import SwiftUI
 
+
+
+
 struct ToDoListView: View {
+    
+    @StateObject var viewModel = ToDoListViewViewModel()
+    private let userId: String
+    
+    init(userId: String){
+//        dışardan gelen userId ' yi burdaki userId ye atadık
+        self.userId = userId
+    }
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                
+            }
+            .navigationTitle("Görevler")
+            .toolbar{
+                Button{
+                    //                    sheet açma kodları
+                    
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
     }
 }
 
+
 #Preview {
-    ToDoListView()
+    ToDoListView(userId: "123")
 }

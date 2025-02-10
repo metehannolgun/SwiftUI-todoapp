@@ -22,7 +22,7 @@ struct LoginView: View {
                         Text(viewModel.errorMessage)
                             .foregroundColor(.red)
                     }
-                    TextField("Email giriniz", text: $viewModel.email)
+                    TextField("Email girsene", text: $viewModel.email)
                     SecureField("Password", text: $viewModel.password)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)
@@ -30,9 +30,10 @@ struct LoginView: View {
                 }
                 .frame(height: 200)
                 
-                BigButton(title: "Giriş Yap") {
+                BigButton(title: "Giriş Yap", action: {
                     viewModel.login()
-                }
+                })
+                
           
                 Spacer()
                 
