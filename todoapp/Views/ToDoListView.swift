@@ -30,11 +30,17 @@ struct ToDoListView: View {
             .toolbar{
                 Button{
                     //                    sheet açma kodları
+                    viewModel.showingNewItemView.toggle()
                     
                 } label: {
                     Image(systemName: "plus")
                 }
             }
+            .sheet(isPresented: $viewModel.showingNewItemView,
+                   content: {
+                NewItemView(newItemPresented:$viewModel.showingNewItemView)
+                
+            })
         }
     }
 }

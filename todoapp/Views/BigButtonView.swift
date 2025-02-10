@@ -18,7 +18,7 @@ struct BigButton: View {
                 RoundedRectangle(cornerRadius: 50)
                     .foregroundStyle(.primary)
                     
-                Text("Kayıt Ol ")
+                Text(title)
                     .foregroundColor(.black)
             }
         })
