@@ -22,7 +22,7 @@ struct LoginView: View {
                         Text(viewModel.errorMessage)
                             .foregroundColor(.red)
                     }
-                    TextField("Email girsene", text: $viewModel.email)
+                    TextField("Email", text: $viewModel.email)
                     SecureField("Password", text: $viewModel.password)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)

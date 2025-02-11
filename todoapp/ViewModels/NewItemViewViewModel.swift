@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+
 class NewItemViewViewModel: ObservableObject {
     @Published var title = ""
     @Published var dueDate = Date()
@@ -23,19 +24,20 @@ class NewItemViewViewModel: ObservableObject {
             return
         }
         let newItemId = UUID().uuidString
-        let newItem = ToDoListItem(
-            id: newItemId,
-            title: title,
-            dueDate: dueDate.timeIntervalSince1970,
-            createDate: Date().timeIntervalSince1970,
-            isDone: false
-        )
+        let newItem = ToDoListItem(id: newItemId,
+                                   title: title,
+                                   dueDate: dueDate.timeIntervalSince1970,
+                                   createdDate: Date().timeIntervalSince1970,
+                                   isDone: false)
         let db = Firestore.firestore()
-            db.collection("users")
+        db.collection("users")
             .document(uId)
             .collection("todos")
             .document(newItem.id)
             .setData(newItem.asDictionary())
+       
+        
+        
     }
         
         //    girilen işlemler için validation işlemleri

@@ -5,32 +5,41 @@
 //  Created by Metehan Olgun on 7.02.2025.
 //
 
+import FirebaseFirestore
 import SwiftUI
-
-
-
 
 struct ToDoListView: View {
     
-    @StateObject var viewModel = ToDoListViewViewModel()
-    private let userId: String
+    @StateObject var viewModel: ToDoListViewViewModel
+    @FirestoreQuery var items: [ToDoListItem]
     
     init(userId: String){
-//        dışardan gelen userId ' yi burdaki userId ye atadık
-        self.userId = userId
+        self._items = FirestoreQuery(collectionPath:"users/\(userId)/todos")
+        self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
     }
     
     
     var body: some View {
         NavigationView{
             VStack{
+                List(items){ item in
+                    ToDoListItemView(item: item)
+                        .swipeActions{
+                            Button("Sil"){
+                                viewModel.delete(id: item.id)
+                                
+                            }
+                            .background(Color.red)
+                        }
+                }
+                .listStyle(PlainListStyle())
                 
             }
             .navigationTitle("Görevler")
             .toolbar{
                 Button{
                     //                    sheet açma kodları
-                    viewModel.showingNewItemView.toggle()
+                    viewModel.showingNewItemView = true
                     
                 } label: {
                     Image(systemName: "plus")
@@ -38,7 +47,7 @@ struct ToDoListView: View {
             }
             .sheet(isPresented: $viewModel.showingNewItemView,
                    content: {
-                NewItemView(newItemPresented:$viewModel.showingNewItemView)
+                NewItemView(newItemPresented: $viewModel.showingNewItemView)
                 
             })
         }
@@ -47,5 +56,5 @@ struct ToDoListView: View {
 
 
 #Preview {
-    ToDoListView(userId: "123")
+    ToDoListView(userId: "8fYWnq8JE2dDO8b9u55xRjQKYDb2")
 }
