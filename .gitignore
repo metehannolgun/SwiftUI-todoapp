@@ -1,0 +1,7 @@
+.env
+firebase.json
+.firebaserc
+.firebase/
+firestore.indexes.json
+
+GoogleService-Info.plist
