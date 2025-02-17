@@ -15,6 +15,7 @@ This project is a **todo list application** developed using **SwiftUI**. It inte
 - **SwiftUI**: The user interface is developed using SwiftUI. 🌱
 - **Firebase**: Firebase is used for data storage and user authentication. 🔥
 - **Firebase Authentication**: Firebase Authentication integration for user login and registration. 🔒
+- <img width="485" alt="ToDo3" src="https://github.com/user-attachments/assets/dddff65b-a351-4297-b200-b818974d2ca9" />
 
 ## Installation 🛠️
 
@@ -46,15 +47,14 @@ If you want to contribute to this project, follow these steps:
 3. Make your changes and commit them. 📝
 4. Push your changes to your forked repository. ⬆️
 5. Open a pull request. 🔀
+   
 
 ## License 📜
 
 This project is licensed under the [MIT License](LICENSE). ✨
-![ToDo](https://github.com/user-attachments/assets/f8c7cd56-c600-4101-88c7-9ba697fb5bb3)
 
-![ToDo2](https://github.com/user-attachments/assets/99fd10fa-35d4-479f-b6f6-58086bab6a8a)
 
-<img width="485" alt="ToDo3" src="https://github.com/user-attachments/assets/dddff65b-a351-4297-b200-b818974d2ca9" />
+
 
 ---
 
